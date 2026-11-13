@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sign Up - Test Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body class="auth-page">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h2>Create an Account</h2>
+      <p>Register with DataStore to get started</p>
+    </div>
+
+    <form id="signupForm" novalidate>
+      <div id="generalError" class="alert alert-error" style="display:none;"></div>
+      <div id="generalSuccess" class="alert alert-success" style="display:none;"></div>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. John Doe" autocomplete="name" required />
+        <span class="field-error" id="nameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="e.g. user@example.com" autocomplete="email" required />
+        <span class="field-error" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="Create a password (min 6 characters)" autocomplete="new-password" required />
+          <button type="button" id="togglePassword" class="toggle-pwd" aria-label="Toggle password visibility">👁</button>
+        </div>
+        <span class="field-error" id="passwordError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" autocomplete="new-password" required />
+        <span class="field-error" id="confirmPasswordError"></span>
+      </div>
+
+      <button type="submit" id="submitBtn" class="btn-primary">
+        <span id="btnText">Sign Up</span>
+      </button>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Sign In</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+
+</html>
+
